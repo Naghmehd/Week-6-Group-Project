@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+
+  resources :users
+
+  resources :movies do
+    resources :upvotes
+    resources :downvotes
+  end
+
+  namespace :api do
+    resources :users
+    
+    resources :movies do
+      resources :upvotes
+      resources :downvotes
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
