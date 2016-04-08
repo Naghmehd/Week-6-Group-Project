@@ -6,7 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-movies = ["Batman","Spiderman","Lulu","Amalie","Pets"]
+movies = ["Batman", "grenre","Spiderman","genre","Amalie","genre"]
+
+
+movie = Movie.create(title: movies.shift,
+                    genre: movies.shift
+                    )
 
 20.times do
   user = User.create!(name: Faker::Name.name,
