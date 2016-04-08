@@ -3,24 +3,24 @@ class Api::MoviesController < ApplicationController
   respond_to :json
 
   def index
-    @movie = movie.all
+    @movie = Movie.all
     respond_with(@movie)
   end
 
   def show
-   @movie = movie.find(params[:id])
-   respond_with @movie, :include => :posts
+   @movie = Movie.find(params[:id])
+   respond_with @movie
     rescue ActiveRecord::RecordNotFound
     render json: { message: "Not found", status: 404 }, status: 404
   end
 
   def new
-    @movie = movie.new
+    @movie = Movie.new
     respond_with @movie = movie.new
   end
 
   def create
-    @movie = movie.new
+    @movie = Movie.new
     respond_with @movie = movie.new(movie: params[:title][:genre])
   end
 
@@ -53,7 +53,7 @@ class Api::MoviesController < ApplicationController
   private
 
   def set_movie
-    @movie = movie.find(params[:id])
+    @movie = Movie.find(params[:id])
   end
 
   def movie_params

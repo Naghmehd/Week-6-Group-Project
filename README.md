@@ -23,6 +23,12 @@ Things you may want to cover:
 
 * ...
 
+routes:
+http://localhost:3000/api/movies.json
+http://localhost:3000/api/movies/1.json
+
+http://localhost:3000/api/users.json
+
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.

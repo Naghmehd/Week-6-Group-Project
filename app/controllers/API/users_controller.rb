@@ -9,7 +9,7 @@ class Api::UsersController < ApplicationController
 
   def show
    @user = User.find(params[:id])
-   respond_with @user, :include => :posts
+   respond_with @user
     rescue ActiveRecord::RecordNotFound
     render json: { message: "Not found", status: 404 }, status: 404
   end
