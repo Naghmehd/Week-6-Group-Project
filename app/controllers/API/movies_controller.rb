@@ -1,53 +1,50 @@
 class Api::MoviesController < ApplicationController
   protect_from_forgery with: :null_session
-  respond_to :json
 
   def index
-    @movie = Movie.all
-    respond_with(@movie)
+    render json: @movies = Movie.all
   end
 
   def show
    @movie = Movie.find(params[:id])
-   respond_with @movie
+   render  json: @movie
+
     rescue ActiveRecord::RecordNotFound
-    render json: { message: "Not found", status: 404 }, status: 404
+    render json: {message: "Not found", status: 404 }
   end
 
   def new
-    @movie = Movie.new
-    respond_with @movie = movie.new
+    render json: @movie = Movie.new
   end
 
   def create
-    @movie = Movie.new
-    respond_with @movie = movie.new(movie: params[:title][:genre])
+
+    render  json: @movie = Movie.new(movie: params[:title][:genre])
   end
 
   def edit
-    @movie = set_movie
-    respond_with @movie
+    render json: @movie
   end
 
   def update
     @movie = set_movie
     @movie.update(movie_params)
 
-    respond_with @movie
+    render json: @movie
 
     rescue ActiveRecord::RecordNotFound
-    render json: { message: "Not found", status: 404 }, status: 404
+    render json: { message: "Not found", status: 404 }
   end
 
 
   def destroy
-    @uer = set_movie
+    @movie = set_movie
     @movie.destroy
 
-    respond_with @movie.destroy
+    render @movie.destroy
 
     rescue ActiveRecord::RecordNotFound
-    render json: { message: "Not found", status: 404 }, status: 404
+    render json: { message: "Not found", status: 404 }
   end
 
   private
@@ -57,7 +54,7 @@ class Api::MoviesController < ApplicationController
   end
 
   def movie_params
-      params.require(:movie).permit(:moviename)
+      params.require(:movie).permit(:title, :genre)
   end
 
 
