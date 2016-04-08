@@ -13,10 +13,7 @@ movies = [
   ["Zootopia", "Animated"]
 ]
 
-movies.each do |title, genre|
-  Movie.create(title: title,
-              genre: genre)
-end
+
 
 20.times do
   user = User.create!(name: Faker::Name.name,
@@ -25,10 +22,14 @@ end
                       )
                   end
 
-      rand(1..5).times do
-                    Upvote.create!(movie_id: movie.id)
+movies.each do |title, genre|
+  movie = Movie.create(title: title,
+              genre: genre)
+              rand(1..5).times do
+                            Upvote.create!(movie_id: movie.id)
 
-          rand(1..5).times do
-                    Downvote.create!(movie_id: movie.id)
-          end
-      end
+                  rand(1..5).times do
+                            Downvote.create!(movie_id: movie.id)
+                  end
+                end
+              end
