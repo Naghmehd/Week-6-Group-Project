@@ -7,12 +7,28 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 movies = [
-  ["Batman", "grenre"],
-  ["Spiderman","genre"],
-  ["Amalie","genre"]
+  ["Batman", "Superhero"],
+  ["Spiderman", "Superhero"],
+  ["Amalie", "Drama"],
+  ["Zootopia", "Animated"]
 ]
 
 movies.each do |title, genre|
-  Movie.create(title: title
+  Movie.create(title: title,
               genre: genre)
 end
+
+20.times do
+  user = User.create!(name: Faker::Name.name,
+                      username: Faker::Internet.user_name,
+                      password: Faker::Internet.password,
+                      )
+                  end
+
+      rand(1..5).times do
+                    Upvote.create!(movie_id: movie.id)
+
+          rand(1..5).times do
+                    Downvote.create!(movie_id: movie.id)
+          end
+      end
