@@ -8,6 +8,9 @@ Bundler.require(*Rails.groups)
 
 module GroupProject
   class Application < Rails::Application
+    # Use the responders controller from the responders gem
+    config.app_generators.scaffold_controller :responders_controller
+
     config.action_dispatch.default_headers = {
       'Access-Control-Allow-Origin'   => '*',
       'Access-Control-Allow-Methods'  => 'POST, PUT, DELETE, GET, OPTIONS',
