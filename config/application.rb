@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module GroupProject
   class Application < Rails::Application
-    onfig.action_dispatch.default_headers = {
+    config.action_dispatch.default_headers = {
       'Access-Control-Allow-Origin'   => '*',
       'Access-Control-Allow-Methods'  => 'POST, PUT, DELETE, GET, OPTIONS',
       'Access-Control-Request-Method' => '*',
@@ -28,6 +28,6 @@ module GroupProject
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    
+
   end
 end
