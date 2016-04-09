@@ -5,8 +5,8 @@ class UpvoteController < ApplicationController
 
   def create_upvote
     @upvote = Upvote.new
-    @upvote.link = Link.find(params[:movie_id])
+    @upvote.movie = movie.find(params[:movie_id])
     @upvote.save
-    redirect_to :back #@upvote.link
+    redirect_to :back #@upvote.movie
   end
 end

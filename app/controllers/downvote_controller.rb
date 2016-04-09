@@ -5,7 +5,7 @@ class DownvoteController < ApplicationController
 
   def create_downvote
     @downvote = Downvote.new
-    @downvote.link = Link.find(params[:movie_id])
+    @downvote.movie = movie.find(params[:movie_id])
     @downvote.save
     redirect_to :back
   end
