@@ -29,15 +29,6 @@ movies = [
   ["Independence Day: Resurgence", "Sci-Fi"]
 ]
 
-
-
-20.times do
-  user = User.create!(name: Faker::Name.name,
-                      username: Faker::Internet.user_name,
-                      password: Faker::Internet.password,
-                      )
-                  end
-
 movies.each do |title, genre|
   movie = Movie.create(title: title,
               genre: genre)
