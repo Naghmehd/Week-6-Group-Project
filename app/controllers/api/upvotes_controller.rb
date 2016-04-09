@@ -1,4 +1,4 @@
-class Api::Upvotes_Controller < ApplicationController
+class Api::UpvotesController < ApplicationController
   protect_from_forgery with: :null_session
 
   def index
@@ -8,7 +8,7 @@ class Api::Upvotes_Controller < ApplicationController
 
   def create_upvote
     @upvote = Upvote.new
-    @upvote.movie = movie.find(params[:movie_id])
+    @upvote.movie = Movie.find(params[:movie_id])
     @upvote.save
 
     render json: @upvote = Upvote.new
