@@ -27,9 +27,5 @@ movies.each do |title, genre|
               genre: genre)
               rand(1..5).times do
                             Upvote.create!(movie_id: movie.id)
-
-                  rand(1..5).times do
-                            Downvote.create!(movie_id: movie.id)
-                  end
                 end
               end

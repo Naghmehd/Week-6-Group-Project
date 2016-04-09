@@ -4,7 +4,5 @@ class Movie < ActiveRecord::Base
 
   validates :title, presence: true
 
-  def scores
-    upvotes.count + 1
-  end
+
 end

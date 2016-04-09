@@ -1,3 +1,3 @@
 class Upvote < ActiveRecord::Base
-  belongs_to :movies
+  belongs_to :movie, counter_cache: true
 end
