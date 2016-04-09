@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources :movies do
-    
+    resources :upvotes
   end
 
   namespace :api do
@@ -11,7 +11,6 @@ Rails.application.routes.draw do
 
     resources :movies do
       resources :upvotes
-      resources :downvotes
     end
   end
 
