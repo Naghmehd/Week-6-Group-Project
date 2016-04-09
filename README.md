@@ -24,10 +24,10 @@ Things you may want to cover:
 * ...
 
 routes:
-http://localhost:3000/api/movies.json
-http://localhost:3000/api/movies/1.json
+http://localhost:3000/api/movies
+http://localhost:3000/api/movies/1
 
-http://localhost:3000/api/users.json
+http://localhost:3000/api/users
 
 
 Please feel free to use a different markup language if you do not plan to run
