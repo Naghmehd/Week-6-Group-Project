@@ -2,8 +2,6 @@ class MoviesController < ApplicationController
 
   def index
     @movie.Movie.all
-
-    all_movies = movie.all.sort_by { |m| [m.scores, m.title] }.reverse!
   end
 
   def show
