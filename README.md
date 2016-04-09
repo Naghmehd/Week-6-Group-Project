@@ -25,6 +25,8 @@ Things you may want to cover:
 
 routes:
 
+https://group-project-movie-tiy.herokuapp.com/
+
 ``
 api_sign_in_path	GET	/api/sign_in(.:format)	api/sessions#sign_in
 POST	/api/sign_in(.:format)	api/sessions#create

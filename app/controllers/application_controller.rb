@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   def authenticate_user
     if session[:user_id].nil?
       flash[:alert] = "Must be signed in"
-      redirect_to sign_in_path
+      
     end
   end
 end
