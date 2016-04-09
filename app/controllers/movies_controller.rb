@@ -1,29 +1,29 @@
 class MoviesController < ApplicationController
 
   def index
-    @Movie.Movie.all
+    @movie.Movie.all
 
     all_movies = movie.all.sort_by { |m| [m.scores, m.title] }.reverse!
   end
 
   def show
-    @Movie = set_Movie
+    @movie = set_Movie
   end
 
   def new
-    @Movie = Movie.new
+    @movie = Movie.new
   end
 
   def create
     movie.create(user_id: params[:movie][:user_id],
                 title: params[:movie][:title],
-                genre:params[:movie][:genre]
+                genre:params[:movie][:genre])
 
-    @Movie.save
+    @movie.save
   end
 
   def edit
-    @Movie = set_Movie
+    @movie = set_Movie
   end
 
   def update
@@ -31,15 +31,15 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    @Movie = set_Movie
-    @Movie.destroy
+    @movie = set_Movie
+    @movie.destroy
   end
 
 private
 
   def set_Movie
-    @Movie = Movie.find(params[:id])
-    
+    @movie = Movie.find(params[:id])
+    @movie = Movie.find(params[:id])
   end
 
   def Movie_params

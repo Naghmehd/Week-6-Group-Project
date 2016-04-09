@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources :movies do
-    post '/upvotes/:link_id', to: 'upvotes#create_upvote', as: 'upvote_link'
-    post '/downvotes/:link_id', to: 'downvotes#create_downvote', as: 'downvote_link'
+    
   end
 
   namespace :api do

@@ -10,8 +10,8 @@ class Api::Upvotes_Controller < ApplicationController
     @upvote = Upvote.new
     @upvote.movie = movie.find(params[:movie_id])
     @upvote.save
-    
-    render json:
+
+    render json: @upvote = Upvote.new
   end
 
 end
