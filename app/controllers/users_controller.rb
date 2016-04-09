@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :authenticate_user
 
   def index
     @user.User.all
@@ -13,8 +14,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new
-    @user.save
+    @user = User.new(user_params)
+    if @user.save
+      flash[:notice] = "Succesfully created an account signed in!"
+      session[:user_id] = @user.id
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -37,7 +44,7 @@ private
   end
 
   def user_params
-    params.require(:user).permit(:username)
+    params.require(:user).permit(:username, :password, :password_confirmation)
   end
 
 end

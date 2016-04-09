@@ -19,10 +19,16 @@ class Api::UsersController < ApplicationController
   end
 
   def create
-    @user = User.new
-    render  json: @user = User.new(username: params[:user][:username][:password])
+    @user = User.new(user_params)
+    render  json: @user = User.new(username: params[:user][:username][:password][:password_confirmation])
 
-    @user.save!
+    if @user.save
+      flash[:notice] = "Succesfully created an account signed in!"
+      session[:user_id] = @user.id
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -56,7 +62,7 @@ class Api::UsersController < ApplicationController
   end
 
   def user_params
-      params.require(:user).permit(:username)
+      params.require(:user).permit(:username, :password, :password_confirmation)
   end
 
 
