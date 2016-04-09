@@ -10,22 +10,22 @@ movies = [
   ["Pandemic", "Action and Adventure"],
   ["The Legend of Tarzan", "Action and Adventure"],
   ["Jason Bourne", "Action and Adventure"],
-  ["Suicide Squad", "Action and Adventure"]
-  ["Criminal", "Action and Adventure"]
-  ["Sausage Party", "Comedy"]
-  ["Ghostbusters", "Comedy"]
-  ["Neighbors 2: Sorority Rising", "Comedy"]
-  ["Nine Lives", "Comedy"]
-  ["The Brothers Grimsby", "Comedy"]
-  ["The Jungle Book", "Family"]
-  ["Finding Dory", "Family"]
-  ["Ratchet and Clank", "Family"]
-  ["The BFG", "Family"]
-  ["Alice Through the Looking Glass", "Family"]
-  ["Captain America: Civil War", "Sci-Fi"]
-  ["Rogue One: A Star Wars Story", "Sci-Fi"]
-  ["X-men: Apocalypse", "Sci-Fi"]
-  ["Star Trek Beyond", "Sci-Fi"]
+  ["Suicide Squad", "Action and Adventure"],
+  ["Criminal", "Action and Adventure"],
+  ["Sausage Party", "Comedy"],
+  ["Ghostbusters", "Comedy"],
+  ["Neighbors 2: Sorority Rising", "Comedy"],
+  ["Nine Lives", "Comedy"],
+  ["The Brothers Grimsby", "Comedy"],
+  ["The Jungle Book", "Family"],
+  ["Finding Dory", "Family"],
+  ["Ratchet and Clank", "Family"],
+  ["The BFG", "Family"],
+  ["Alice Through the Looking Glass", "Family"],
+  ["Captain America: Civil War", "Sci-Fi"],
+  ["Rogue One: A Star Wars Story", "Sci-Fi"],
+  ["X-men: Apocalypse", "Sci-Fi"],
+  ["Star Trek Beyond", "Sci-Fi"],
   ["Independence Day: Resurgence", "Sci-Fi"]
 ]
 
