@@ -15,7 +15,10 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @Movie = Movie.new
+    movie.create(user_id: params[:movie][:user_id],
+                title: params[:movie][:title],
+                genre:params[:movie][:genre]
+
     @Movie.save
   end
 
@@ -36,6 +39,7 @@ private
 
   def set_Movie
     @Movie = Movie.find(params[:id])
+    
   end
 
   def Movie_params
