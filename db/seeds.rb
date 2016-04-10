@@ -29,8 +29,8 @@ movies = [
   ["Rogue One: A Star Wars Story", "Sci-Fi"],
   ["X-men: Apocalypse", "Sci-Fi"],
   ["Star Trek Beyond", "Sci-Fi"],
-  ["Independence Day: Resurgence", "Sci-Fi"]
-  ["Assassin's Creed", "Sci-Fi"],
+  ["Independence Day: Resurgence", "Sci-Fi"],
+  ["Assassin's Creed", "Sci-Fi"]
 ]
 
 movies.each do |title, genre|

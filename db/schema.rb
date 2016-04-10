@@ -16,12 +16,6 @@ ActiveRecord::Schema.define(version: 20160409153742) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "downvotes", force: :cascade do |t|
-    t.integer  "movie_id",   null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "movies", force: :cascade do |t|
     t.string   "title",                     null: false
     t.string   "genre",                     null: false
@@ -32,14 +26,6 @@ ActiveRecord::Schema.define(version: 20160409153742) do
 
   create_table "upvotes", force: :cascade do |t|
     t.integer  "movie_id",   null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.string   "username",   null: false
-    t.string   "password",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
