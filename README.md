@@ -28,6 +28,7 @@ routes:
 https://group-project-movie-tiy.herokuapp.com/
 
 ``
+api_movie_upvote_movies_path	POST	/api/movies/:movie_id/upvotes/:movie_id(.:format)	api/upvotes#create_upvote
 api_movie_upvotes_path	GET	/api/movies/:movie_id/upvotes(.:format)	api/upvotes#index
 POST	/api/movies/:movie_id/upvotes(.:format)	api/upvotes#create
 new_api_movie_upvote_path	GET	/api/movies/:movie_id/upvotes/new(.:format)	api/upvotes#new
