@@ -25,7 +25,7 @@ movies = [
   ["The BFG", "Family", "http://ia.media-imdb.com/images/M/MV5BMjI5MjI4NTEzOF5BMl5BanBnXkFtZTgwNjM2Nzg3NzE@._V1_UY1200_CR90,0,630,1200_AL_.jpg", "http://www.imdb.com/title/tt3691740/?ref_=fn_al_tt_1"],
   ["Alice", "Family", "http://cdn-static.denofgeek.com/sites/denofgeek/files/styles/insert_main_wide_image/public/4/60//alice_through_the_looking_glass_1.jpg?itok=BRYc9TMY", "http://www.imdb.com/title/tt2567026/?ref_=fn_al_tt_1"],
   ["Ice Age", "Family", "http://s3.foxfilm.com/foxmovies/production/films/116/images/posters/463-film-page-large.jpg", "http://www.imdb.com/title/tt3040964/?ref_=fn_al_tt_1"],
-  ["Captain America 2", "Sci-Fi", "http://www.shockya.com/news/wp-content/uploads/captain-america-civil-war-movie-poster.jpg", "http://www.imdb.com/title/tt3498820/?ref_=nv_sr_1"],
+  ["Captain America 3", "Sci-Fi", "http://www.shockya.com/news/wp-content/uploads/captain-america-civil-war-movie-poster.jpg", "http://www.imdb.com/title/tt3498820/?ref_=nv_sr_1"],
   ["Rogue One", "Sci-Fi", "http://images-cdn.moviepilot.com/images/c_fill,h_960,w_640/t_mp_quality/t8eycrdols7brmwlgvgg/will-rogue-one-be-the-gritty-star-wars-movie-we-have-been-waiting-for-rogue-one-a-star-w-918614.jpg", "http://www.imdb.com/title/tt3748528/?ref_=nv_sr_1"],
   ["X-men: Apocalypse", "Sci-Fi", "http://www.movienewz.com/img/films/x-men-apocalypse-poster.jpg", "http://www.imdb.com/title/tt3385516/?ref_=nv_sr_1"],
   ["Star Trek Beyond", "Sci-Fi", "https://s-media-cache-ak0.pinimg.com/736x/fb/f5/fb/fbf5fbb9dc184b9d6011463637c12222.jpg", "http://www.imdb.com/title/tt2660888/?ref_=nv_sr_1"],
