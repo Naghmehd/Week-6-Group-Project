@@ -33,10 +33,11 @@ movies = [
   ["Assassin's Creed", "Sci-Fi", "http://orig13.deviantart.net/a165/f/2013/317/b/1/assassins_creed___the_movie_poster__selfmade__by_mastersebix-d6u3s7w.jpg", "http://www.imdb.com/title/tt2094766/?ref_=nv_sr_1"]
 ]
 
-movies.each do |title, genre, url|
+movies.each do |title, genre, url, a|
   movie = Movie.create(title: title,
               genre: genre,
-              url: url)
+              url: url,
+              a: a)
               rand(1..5).times do
                             Upvote.create!(movie_id: movie.id)
                 end
